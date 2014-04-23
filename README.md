@@ -57,7 +57,7 @@ seen the MIT license, you can see it [here][license].
 
 [mdo]: https://github.com/mdo
 [hugo-license]: https://github.com/spf13/hugo/blob/master/LICENSE.md
-[license]: /LICENSE
+[license]: /LICENSE.md
 
 Glossary
 --------
