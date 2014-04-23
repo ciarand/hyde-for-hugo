@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {{ template "chrome/head.html" . }}
+
+  <body>
+
+    {{ template "chrome/sidebar.html" . }}
+
+    <div class="content container">
+      <div class="posts">
+        {{ range first 10 .Data.Pages }}
+        <div class="post">
+          <h1 class="post-title">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h1>
+
+          <span class="post-date">{{ .Date.Format "Jan 02 2006" }}</span>
+
+          {{ .Content }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </body>
+</html>
