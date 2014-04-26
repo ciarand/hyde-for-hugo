@@ -7,13 +7,8 @@ Hyde for Hugo
 
 Current status
 --------------
-In progress. I've ripped out most of the Ruby stuff and most of it is a pretty
-simple transition. Stuff like `{% highlight js %}` becomes `{{% highlight js
-%}}`, `site.title` becomes `.Site.Title`, `for`s become `range`s, etc.
-
-The site mostly looks ok, but the code needs some fixing up in places. The
-layouts especially need some love, as there's an uncomfortable amount of code
-repetition throughout.
+Still in progress, but out of alpha. Everything seems to work so far. There are
+a couple of things that need documenting, however.
 
 Versioning
 ----------
@@ -24,15 +19,10 @@ version number to match [upstream][hyde].
 
 Roadmap / commentary
 --------------------
-The layout engine in Hugo is not as intuitive as Jekyll's. Right now each
-template needs to include the `chrome/header` and `chrome/footer`, which reminds
-me of PHP in the early 2000s. We can do better.
-
 RSS is currently broken, and I need to look into why. It's not a high priority
 for me though.
 
-Filenames can be rewritten, and a better comparison of why you'd pick this over
-Jekyll also needs to be written.
+A better comparison of why you'd pick this over Jekyll also needs to be written.
 
 Finally I'd like to refactor some of the code I'm inevitably going to write for
 this out into a Hugo starter package. Something that offers a prebuilt directory

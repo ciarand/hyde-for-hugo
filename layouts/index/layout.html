@@ -1,0 +1,11 @@
+<h1>{{ .Title }}</h1>
+
+<p>{{ .Content }}</p>
+
+<ul>
+    {{ range .Site.Recent }}
+        {{ if (and (eq .Type $.Params.data)) }}
+            <li>{{ .Render "summary" }}</li>
+        {{ end }}
+    {{ end }}
+</ul>

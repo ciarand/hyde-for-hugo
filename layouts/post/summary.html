@@ -1,0 +1,12 @@
+<p>
+    <span class="post-summary__title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="post-summary__reading-time">
+            {{ if eq .ReadingTime 1 }}
+                ({{ .ReadingTime }} minute)
+            {{ else }}
+                ({{ .ReadingTime }} minutes)
+            {{ end }}
+        </span>
+    </span>
+</p>

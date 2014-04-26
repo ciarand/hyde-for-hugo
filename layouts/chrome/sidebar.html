@@ -19,7 +19,8 @@
             {{ range .Site.Recent }}
 
                 {{/* if it's a page and it's not hidden */}}
-                {{ if and (eq .Type "page") (not .Params.hidden) }}
+                {{ $isPage := (or (eq .Type "page") (eq .Type "index")) }}
+                {{ if and $isPage (not .Params.hidden) }}
                     {{ $isActive := (eq $.Permalink .Permalink) }}
                         <li class="sidebar-nav-item{{ if $isActive}} active{{ end }}">
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
