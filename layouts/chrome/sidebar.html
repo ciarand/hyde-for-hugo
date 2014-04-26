@@ -1,40 +1,46 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>{{ .Site.Title }}</h1>
-      <p class="lead">{{ .Description }}</p>
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1>{{ .Site.Title }}</h1>
+            <p class="lead">{{ .Description }}</p>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item{{ if eq .Url "/" }} active{{ end }}">
+                <a href="/">Home</a>
+            </li>
+
+            {{/*
+                The code below dynamically generates a sidebar nav of pages
+                with a type of "page" that don't have the "hidden" param set to
+                true in the front-matter.
+            */}}
+
+            {{ range .Site.Recent }}
+
+                {{/* if it's a page and it's not hidden */}}
+                {{ if and (eq .Type "page") (not .Params.hidden) }}
+                    {{ $isActive := (eq $.Permalink .Permalink) }}
+                        <li class="sidebar-nav-item{{ if $isActive}} active{{ end }}">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </li>
+                {{ end }}
+            {{ end }}
+
+            {{/* Space savers */}}
+            {{ $url := .Site.Params.github.repo }}
+            {{ $version := .Site.Params.version }}
+            <li class="sidebar-nav-item">
+                <a href="{{ $url }}/archive/v{{ $version }}.zip">Download</a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="{{ $url }}">GitHub project</a>
+            </li>
+            <li class="sidebar-nav-item">
+                Currently v{{ $version }}
+            </li>
+        </ul>
+
+        <p>&copy; {{ .Site.LastChange.Format "2006" }}. All rights reserved.</p>
     </div>
-
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav-item{{ if eq .Title "Home" }} active{{ end }}">
-        <a href="/">Home</a>
-      </li>
-
-      {{/*
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      */}}
-
-      {{ range .Data.Pages }}
-        {{ if and (.Title) (eq .Type "page") }}
-          <li class="sidebar-nav-item{{ if eq $.Permalink .Permalink }}
-          active{{ end }}">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
-        {{ end }}
-      {{ end }}
-
-      <li class="sidebar-nav-item">
-        <a href="{{ .Site.Params.github.repo }}/archive/v{{ .Site.Params.version }}.zip">Download</a>
-        </li>
-      <li class="sidebar-nav-item">
-        <a href="{{ .Site.Params.github.repo }}">GitHub project</a>
-      </li>
-      <li class="sidebar-nav-item">
-        Currently v{{ .Site.Params.version }}
-      </li>
-    </ul>
-
-    <p>&copy; {{ .Site.LastChange.Format "2006" }}. All rights reserved.</p>
-  </div>
 </div>

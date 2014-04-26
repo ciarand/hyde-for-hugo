@@ -1,21 +1,14 @@
-{{ template "chrome/head.html" . }}
-  <body>
-    {{ template "chrome/sidebar.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        {{ template "chrome/head.html" . }}
+    </head>
 
-    <div class="content container">
-      <div class="posts">
-        <div class="post">
-          <h1 class="post-title">
-            <a href="{{ .Permalink }}">
-              {{ .Title }}
-            </a>
-          </h1>
+    <body class="theme-base-07">
+        {{ template "chrome/sidebar.html" . }}
 
-          <span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
-
-          {{ .Content }}
+        <div class="content container">
+            {{ .Render "layout" }}
         </div>
-      </div>
-    </div>
-  </body>
-{{ template "chrome/footer.html" }}
+    </body>
+</html>
