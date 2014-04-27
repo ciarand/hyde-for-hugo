@@ -1,14 +1,21 @@
 ---
-title: "What's Jekyll?"
-date: "2012-02-06"
-slug: whats-jekyll
+title: "What's Hugo?"
+date: 2012-02-06
+slug: whats-hugo
 type: post
 ---
 
-[Jekyll](http://jekyllrb.com) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/README.markdown):
+[Hugo][hugo] is a static site generator. It's an open-source tool for creating
+simple yet powerful websites of all shapes and sizes. From [the project's
+readme][hugo-readme]:
 
-  > Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.
+>Hugo is a static site generator written in Go. It is optimized for speed, easy
+>use and configurability. Hugo takes a directory with content and templates and
+>renders them into a full html website.
 
 It's an immensely useful tool and one we encourage you to use here with Hyde.
 
-Find out more by [visiting the project on GitHub](https://github.com/mojombo/jekyll).
+Find out more by [visiting the project on GitHub][hugo-readme].
+
+[hugo]: http://hugo.spf13.com/
+[hugo-readme]: https://github.com/spf13/hugo#readme

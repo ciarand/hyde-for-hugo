@@ -1,6 +1,6 @@
 ---
 title: Example content
-date: "2012-02-07"
+date: 2012-02-07
 slug: example-content
 type: post
 ---
@@ -54,4 +54,4 @@ Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at
 
 -----
 
-Want to see something else added? <a href="https://github.com/mdo/hyde/issues/new">Open an issue.</a>
+Want to see something else added? <a href="https://github.com/ciarand/hyde-for-hugo/issues/new">Open an issue.</a>

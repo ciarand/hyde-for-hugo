@@ -2,7 +2,7 @@
     <div class="container sidebar-sticky">
         <div class="sidebar-about">
             <h1>{{ .Site.Title }}</h1>
-            <p class="lead">{{ .Description }}</p>
+            <p class="lead">{{ .Site.Params.description | safeHtml }}</p>
         </div>
 
         <ul class="sidebar-nav">
@@ -29,7 +29,7 @@
             {{ end }}
 
             {{/* Space savers */}}
-            {{ $url := .Site.Params.github.repo }}
+            {{ $url := .Site.Params.repo }}
             {{ $version := .Site.Params.version }}
             <li class="sidebar-nav-item">
                 <a href="{{ $url }}/archive/v{{ $version }}.zip">Download</a>
