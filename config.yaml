@@ -10,6 +10,8 @@ permalinks:
     post: /:year/:month/:title/
 
 params:
+    # used in atom (RSS) feed
+    author: Your name here!
     tagline: "A Hugo Theme"
     description: >
         A brazen two-column <a href="http://hugo.spf13.com/"
