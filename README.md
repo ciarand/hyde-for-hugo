@@ -5,28 +5,28 @@ Hyde for Hugo
 [hyde]: https://github.com/poole/hyde
 [hugo]: https://github.com/spf13/hugo
 
+Getting started
+---------------
+Get Hugo from [here][get-hugo] and put it somewhere in your `$PATH` (`~/bin`
+works well, just make sure your `.bashrc` / `.zshrc` / `config.fish` is adding
+it).
+
+[get-hugo]: https://github.com/spf13/hugo/releases
+
+```bash
+# Clone the repo
+git clone git@github.com:ciarand/hyde-for-hugo.git
+cd hyde-for-hugo
+# begin serving files
+hugo serve -w
+```
+
+Start messing with it! Your content files will be recompiled with your layout
+files any time either of them change.
+
 Current status
 --------------
-Still in progress, but out of alpha. Everything seems to work so far. There are
-a couple of things that need documenting, however.
-
-Versioning
-----------
-Let's say I'm following [semver][] until 1.0, at which point I'll bump the
-version number to match [upstream][hyde].
-
-[semver]: http://semver.org/
-
-Roadmap / commentary
---------------------
-RSS is currently broken, and I need to look into why. It's not a high priority
-for me though.
-
-A better comparison of why you'd pick this over Jekyll also needs to be written.
-
-Finally I'd like to refactor some of the code I'm inevitably going to write for
-this out into a Hugo starter package. Something that offers a prebuilt directory
-structure that's not as intimidating as the Hugo docs. Something to think about.
+Done! Up to date (as much as it can be) with the original [Hyde][hyde].
 
 Missing features
 ----------------
@@ -34,16 +34,10 @@ Hugo doesn't support pagination right now. It's on their roadmap, and when they
 add it I'll do the same.
 
 License
-=======
-Hugo uses the ([slightly unusual][hugo-license]) "Simple Public License" which
-claims to be "a plain language implementation of GPL 2.0." However, since I'm
-not distributing Hugo (or even Go, just a set of templates that are compatible
-with Go's standards) and this isn't based on any of the Hugo code I don't think
-that applies.
-
-On the other hand, [@mdo][mdo] distributes Hyde under the MIT license. Since
-this is a 100% derivative work I'm going to stick with that. If you've never
-seen the MIT license, you can see it [here][license].
+-------
+[@mdo][mdo] generously distributes Hyde under the MIT license. Since this is a
+100% derivative work I'm going to stick with that. If you've never seen the MIT
+license, you can see it [here][license].
 
 [mdo]: https://github.com/mdo
 [hugo-license]: https://github.com/spf13/hugo/blob/master/LICENSE.md
@@ -67,4 +61,3 @@ created by some very smart people at Google.
 
 [jekyll]: http://jekyllrb.com/
 [go]: http://golang.org/
-
