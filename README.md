@@ -1,3 +1,5 @@
+This project is deprecated and unmaintained. Proceed with caution!
+
 Hyde for Hugo
 =============
 >A port of [Hyde][hyde] for the [Hugo][hugo] static site generator
